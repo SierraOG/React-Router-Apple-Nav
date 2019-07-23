@@ -9,8 +9,14 @@ import styled from 'styled-components';
 const SubNavDiv = styled.div`
   display: flex;
   justify-content: space-evenly;
-  height: 100px;
+  height: 150px;
   align-items: center;
+  background-color: lightgrey;
+`
+
+const Iconimg = styled.img`
+  max-width:50px;
+  max-height:50px;
 `
 
 function SubNav(props) {
@@ -21,8 +27,8 @@ function SubNav(props) {
         <SubNavDiv>
          {appleItemArray.map((item) => (
              <div>
+                <Iconimg src = {item.thumbnail}/>
                 <p>{item.productName}</p>
-                <img src = {item.thumbnail}/>
             </div>
             ))}
         </SubNavDiv>
