@@ -11,19 +11,25 @@ import styled from 'styled-components';
 const NavBar = styled.div`
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  height: 100px;
+`
+const NavDivWrap = styled.div`
   background-color: black;
   height: 100px;
-  align-items: center;
 `
+
 
 function NavWrapper(props) {
     const titles = appleData.navbartitles;
     return(
-        <div>
+        <NavDivWrap>
             <NavBar>
                 {titles.map((title) => <Nav title = {title} />)}
             </NavBar>
-        </div>
+        </NavDivWrap>
 )}
 
 export default NavWrapper

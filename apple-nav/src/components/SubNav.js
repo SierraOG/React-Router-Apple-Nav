@@ -12,6 +12,7 @@ const SubNavDiv = styled.div`
   height: 150px;
   align-items: center;
   background-color: lightgrey;
+  padding: 0 7%;
 `
 
 const Iconimg = styled.img`
@@ -26,7 +27,7 @@ function SubNav(props) {
     return(
         <SubNavDiv>
          {appleItemArray.map((item) => (
-             <div>
+             <div className = 'slide'>
                 <Iconimg src = {item.thumbnail}/>
                 <p>{item.productName}</p>
             </div>
